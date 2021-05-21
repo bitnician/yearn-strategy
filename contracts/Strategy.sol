@@ -148,7 +148,7 @@ contract Strategy is BaseStrategy {
 
 
 
-  function liquidatePosition(uint256 _amountNeeded)
+  function withdrawFromProtocol(uint256 _amountNeeded)
     internal
     override
     returns (uint256 _liquidatedAmount, uint256 _loss)
@@ -165,7 +165,6 @@ contract Strategy is BaseStrategy {
             _loss = _amountNeeded.sub(balanceOfWant);
              withdrawFromProtocol(_liquidatedAmount);
         }
-
 
   }
 
