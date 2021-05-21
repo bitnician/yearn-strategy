@@ -154,15 +154,15 @@ contract Strategy is BaseStrategy {
     returns (uint256 _liquidatedAmount, uint256 _loss)
   {
 
-       uint256 balanceOfWant = balanceOfWant(); 
+       uint256 wantBalance = balanceOfWant(); 
 
-        if (balanceOfWant >= _amountNeeded) {
+        if (wantBalance >= _amountNeeded) {
             _liquidatedAmount = _amountNeeded;
             _loss = 0;
             withdrawFromProtocol(_liquidatedAmount);
         } else {
-            _liquidatedAmount = balanceOfWant;
-            _loss = _amountNeeded.sub(balanceOfWant);
+            _liquidatedAmount = wantBalance;
+            _loss = _amountNeeded.sub(wantBalance);
              withdrawFromProtocol(_liquidatedAmount);
         }
 
