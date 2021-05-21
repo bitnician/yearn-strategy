@@ -1,1 +1,1 @@
-![Alt text](./uml.jpg?raw=true 'Title')
+![Alt text](./uml.jpeg?raw=true 'Title')
